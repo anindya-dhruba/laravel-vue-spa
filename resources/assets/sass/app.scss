@@ -1,0 +1,36 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.navbar {
+  margin-bottom: 0;
+}
+.notification {
+  margin-bottom: 22px;
+
+  .alert {
+    border-radius: 0;
+    cursor: pointer;
+  }
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+.page-header {
+  margin-top: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s ease;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0;
+}
