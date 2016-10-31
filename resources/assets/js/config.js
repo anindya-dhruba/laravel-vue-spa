@@ -1,7 +1,7 @@
-export const siteName = 'Laravel Vue SPA';
-export const apiDomain = 'http://laravel53-vue2-starter.dev/api/';
+const apiDomain = Laravel.apiDomain;
+export const siteName = Laravel.siteName;
 
-export const login = apiDomain + 'authenticate';
-export const currentUser = apiDomain + 'user';
-export const updateUserProfile = apiDomain + 'user/profile/update';
-export const updateUserPassword = apiDomain + 'user/password/update';
+export const login = apiDomain + '/authenticate';
+export const currentUser = apiDomain + '/user';
+export const updateUserProfile = apiDomain + '/user/profile/update';
+export const updateUserPassword = apiDomain + '/user/password/update';

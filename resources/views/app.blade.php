@@ -11,7 +11,11 @@
 
         <link href="{{ elixir('/css/app.css') }}" rel="stylesheet">
         <script>
-            window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
+            window.Laravel = {!! json_encode([
+                    'csrfToken' => csrf_token(),
+                    'siteName'  => config('app.name'),
+                    'apiDomain' => config('app.url').'/api'
+                ]) !!}
         </script>
     </head>
 
