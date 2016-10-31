@@ -13,8 +13,8 @@ Starter Boilerplate SPA made with Laravel 5.3, JWT Auth, Vue 2, Vue-router 2, Vu
 * Copy `.env.example` to `.env`
 * Configure `.env`
 * `cd` to the repo
-* Run `php artisan key:generate`
 * Run `composer install --no-scripts`
+* Run `php artisan key:generate`
 * Run `php artisan migrate --seed`. A user will be seeded so that you can login, where:
     * email is: root@example.com
     * password is: root
