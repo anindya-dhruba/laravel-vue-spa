@@ -1,11 +1,18 @@
 # Laravel Vue SPA
-Starter Boilerplate SPA made with Laravel 5.3, JWT Auth, Vue 2, Vue-router 2, Vuex 2 & <3
+Starter Boilerplate SPA made with Laravel 5.4, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios & <3
 
+## What's New
+ * Updated to [Laravel 5.4](https://laravel.com/docs/5.4) from [Laravel 5.3](https://laravel.com/docs/5.3)
+ * Build system uses [Laravel Mix](https://laravel.com/docs/5.4/mix) (webpack) instead of [Laravel Elixir](https://laravel.com/docs/5.3/elixir) (gulp)
+ * All packages are updated (both PHP and JS)
+ * Using [Axios](https://github.com/mzabriskie/axios) instead of [Vue Resource](https://github.com/pagekit/vue-resource) [(why?)](https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4#.dlferoozu)
+ * Project structure updated
 ## What's included 
-* [Laravel 5.3](https://laravel.com/docs/5.3)
+* [Laravel 5.4](https://laravel.com/docs/5.4)
 * [Vue 2](https://vuejs.org)
-* [Vue Route 2](http://router.vuejs.org)
+* [Vue Router 2](http://router.vuejs.org)
 * [Vuex 2](http://vuex.vuejs.org)
+* [Axios](https://github.com/mzabriskie/axios)
 * [Authentication with JWT Token](https://github.com/tymondesigns/jwt-auth)
 
 ## Installation:
@@ -16,12 +23,12 @@ Starter Boilerplate SPA made with Laravel 5.3, JWT Auth, Vue 2, Vue-router 2, Vu
 * Run `composer install --no-scripts`
 * Run `php artisan key:generate`
 * Run `php artisan migrate --seed`. A user will be seeded so that you can login, where:
-    * email is: root@example.com
-    * password is: root
+    * email is: `root@example.com`
+    * password is: `root`
 * Run `npm install`
-* Run `gulp watch`
+* Run `npm run watch`
 * View the site by 
-    * Either running `php artisan serve` if you are not using vagrant homestead (in a new terminal/command prompt)
+    * Either running `php artisan serve` if you are not using vagrant homestead or laravel valet (in a new terminal/command prompt)
     * Otherwise go to your local dev url configured in vagrant
 
 For any problem in laravel setup, please get help from [Laravel](https://laravel.com) site. If that does not work, please create an issue, I will try my best to help.

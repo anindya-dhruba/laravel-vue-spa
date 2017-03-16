@@ -19,6 +19,6 @@
 
 <script>
     export default{
-
+        name: 'profile-wrapper'
     }
 </script>

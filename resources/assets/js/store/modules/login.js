@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import * as api from './../../config';
 import jwtToken from './../../helpers/jwt-token';
 import * as types from './../../mutation-types';
@@ -27,13 +26,13 @@ export default {
     actions: {
         loginRequest: ({dispatch}, formData) => {
             return new Promise((resolve, reject) => {
-                Vue.http.post(api.login, formData)
+                axios.post(api.login, formData)
                     .then(response => {
-                        dispatch('loginSuccess', response.body);
+                        dispatch('loginSuccess', response.data);
                         resolve();
                     })
-                    .catch(response => {
-                        dispatch('loginFailure', response.body);
+                    .catch(error => {
+                        dispatch('loginFailure', error.response.data);
                         reject();
                     });
             });

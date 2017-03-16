@@ -6,7 +6,9 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
+body {
+  overflow-y: scroll;
+}
 .navbar {
   margin-bottom: 0;
 }

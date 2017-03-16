@@ -18,6 +18,7 @@
     import {mapState, mapActions} from 'vuex';
 
     export default {
+        name: 'notification',
         computed: {
             ...mapState({
                 success: state => state.notification.success,

@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import * as api from './../../config';
 import * as types from './../../mutation-types';
 
@@ -26,13 +25,13 @@ export default {
     actions: {
         updateProfileRequest: ({dispatch}, formData) => {
             return new Promise((resolve, reject) => {
-                Vue.http.post(api.updateUserProfile, formData)
+                axios.post(api.updateUserProfile, formData)
                     .then(response => {
-                        dispatch('updateProfileSuccess', response.body);
+                        dispatch('updateProfileSuccess', response.data);
                         resolve();
                     })
-                    .catch(response => {
-                        dispatch('updateProfileFailure', response.body);
+                    .catch(error => {
+                        dispatch('updateProfileFailure', error.response.data);
                         reject();
                     });
             })

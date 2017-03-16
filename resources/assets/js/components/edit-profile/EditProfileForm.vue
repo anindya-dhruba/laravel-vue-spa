@@ -1,30 +1,25 @@
 <template>
     <div>
-        <h1 class="page-header">Edit Profile</h1>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <form @submit.prevent="updateProfile()">
-                    <div class="form-group" :class="{ 'has-error' : errors.name}">
-                        <label class="control-label" for="name">Name</label>
-                        <input type="text" class="form-control" id="name" v-model="name">
-                        <span class="help-block" v-if="errors.name">{{ errors.name }}</span>
-                    </div>
-                    <div class="form-group" :class="{ 'has-error' : errors.email}">
-                        <label class="control-label" for="email">Email</label>
-                        <input type="email" class="form-control" id="email" v-model="email">
-                        <span class="help-block" v-if="errors.email">{{ errors.email }}</span>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Update Profile</button>
-                        <span class="help-block">
-                            Update Profile is disabled for demo purpose.
-                            <br>
-                            Please, enable it from <code>updateProfile()</code> method in Edit-profile.vue component
-                        </span>
-                    </div>
-                </form>
+        <form @submit.prevent="updateProfile()">
+            <div class="form-group" :class="{ 'has-error' : errors.name}">
+                <label class="control-label" for="name">Name</label>
+                <input type="text" class="form-control" id="name" v-model="name">
+                <span class="help-block" v-if="errors.name">{{ errors.name }}</span>
             </div>
-        </div>
+            <div class="form-group" :class="{ 'has-error' : errors.email}">
+                <label class="control-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" v-model="email">
+                <span class="help-block" v-if="errors.email">{{ errors.email }}</span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Update Profile</button>
+                <span class="help-block">
+                    Update Profile is disabled for demo purpose.
+                    <br>
+                    Please, enable it from <code>updateProfile()</code> method in EditProfileForm.vue component
+                </span>
+            </div>
+        </form>
     </div>
 </template>
 
@@ -33,6 +28,7 @@
     import * as types from './../../mutation-types';
 
     export default {
+        name: 'edit-profile-form',
         created() {
             this.$store.dispatch('clearEditProfileErrors');
             this.$store.dispatch('setAuthUser');

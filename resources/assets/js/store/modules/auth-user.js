@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import * as api from './../../config';
 import * as types from './../../mutation-types';
 
@@ -28,11 +27,11 @@ export default {
     },
     actions: {
         setAuthUser: ({commit, dispatch}) => {
-            Vue.http.get(api.currentUser)
+            axios.get(api.currentUser)
                 .then(response => {
                     commit({
                         type: types.SET_AUTH_USER,
-                        user: response.body
+                        user: response.data
                     })
                 })
                 .catch(error => {

@@ -2,15 +2,16 @@
     <footer>
         <hr>
         <div class="container">
-            &copy; all rights reserved by <span v-once>{{ siteName }}</span> <span v-once>{{ currentYear }}</span>
+            &copy;<span v-once>{{ siteName }}</span><span v-once>{{ currentYear }}</span>
         </div>
     </footer>
 </template>
 
 <script>
-    import {siteName} from './../config';
+    import {siteName} from './../../config';
 
     export default {
+        name: 'app-footer',
         data() {
             return {
                 siteName: siteName,

@@ -10,23 +10,22 @@
 </template>
 
 <script>
-    import TopMenu from './Top-menu.vue'
-    import Notification from './Notification.vue'
-    import Footer from './Footer.vue'
+    import TopMenu from './shared/TopMenu.vue'
+    import Notification from './shared/Notification.vue'
+    import AppFooter from './shared/AppFooter.vue'
     import jwtToken from './../helpers/jwt-token';
-    import * as api from './../config'
-    import * as types from './../mutation-types';
 
     export default {
+        name: 'app',
         created() {
             if(jwtToken.getToken()) {
                 this.$store.dispatch('setAuthUser');
             }
         },
         components: {
-            'top-menu': TopMenu,
-            'notification': Notification,
-            'app-footer': Footer
+            TopMenu,
+            Notification,
+            AppFooter
         }
     }
 </script>

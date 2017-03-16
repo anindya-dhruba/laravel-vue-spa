@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
-
 Route::post('authenticate', 'AuthenticateController@authenticate');
 
 Route::group(['middleware' => 'jwt.auth'], function()

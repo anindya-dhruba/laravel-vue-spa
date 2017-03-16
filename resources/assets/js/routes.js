@@ -5,12 +5,12 @@ import jwtToken from './helpers/jwt-token';
 Vue.use(VueRouter);
 
 import Store from './store/index'
-import Home from './components/Home.vue'
-import Login from './components/Login.vue'
-import ProfileWrapper from './components/profile/Profile-wrapper.vue'
+import Home from './components/Home/Home.vue'
+import Login from './components/Login/Login.vue'
+import ProfileWrapper from './components/profile-wrapper/ProfileWrapper.vue'
 import Profile from './components/profile/Profile.vue'
-import EditProfile from './components/profile/Edit-profile.vue'
-import EditPassword from './components/profile/Edit-password.vue'
+import EditProfile from './components/edit-profile/EditProfile.vue'
+import EditPassword from './components/edit-password/EditPassword.vue'
 
 const router = new VueRouter({
     mode: 'history',

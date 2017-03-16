@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import * as api from './../../config';
 import * as types from './../../mutation-types';
 
@@ -26,13 +25,13 @@ export default {
     actions: {
         updatePasswordRequest: ({dispatch}, formData) => {
             return new Promise((resolve, reject) => {
-                Vue.http.post(api.updateUserPassword, formData)
+                axios.post(api.updateUserPassword, formData)
                     .then(response => {
-                        dispatch('updatePasswordSuccess', response.body);
+                        dispatch('updatePasswordSuccess', response.data);
                         resolve();
                     })
-                    .catch(response => {
-                        dispatch('updatePasswordFailure', response.body);
+                    .catch(error => {
+                        dispatch('updatePasswordFailure', error.response.data);
                         reject();
                     });
             })

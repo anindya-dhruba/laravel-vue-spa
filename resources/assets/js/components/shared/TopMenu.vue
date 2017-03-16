@@ -32,10 +32,11 @@
 </template>
 
 <script>
-    import {siteName} from './../config';
+    import {siteName} from './../../config';
     import {mapState} from 'vuex';
 
     export default {
+        name: 'top-menu',
         data() {
             return {
                 siteName: siteName
