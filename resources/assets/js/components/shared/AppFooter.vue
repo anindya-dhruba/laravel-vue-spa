@@ -2,7 +2,7 @@
     <footer>
         <hr>
         <div class="container">
-            &copy;<span v-once>{{ siteName }}</span><span v-once>{{ currentYear }}</span>
+            &copy;<span v-once>{{ siteName }}</span> <span v-once>{{ currentYear }}</span>
         </div>
     </footer>
 </template>
