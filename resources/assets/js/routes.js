@@ -5,8 +5,8 @@ import jwtToken from './helpers/jwt-token';
 Vue.use(VueRouter);
 
 import Store from './store/index'
-import Home from './components/Home/Home.vue'
-import Login from './components/Login/Login.vue'
+import Home from './components/home/Home.vue'
+import Login from './components/login/Login.vue'
 import ProfileWrapper from './components/profile-wrapper/ProfileWrapper.vue'
 import Profile from './components/profile/Profile.vue'
 import EditProfile from './components/edit-profile/EditProfile.vue'
