@@ -47,7 +47,7 @@ export default {
         updateProfileFailure: ({commit, dispatch}, body) => {
             commit({
                 type: types.UPDATE_PROFILE_FAILURE,
-                errors: body
+                errors: body.errors || []
             });
 
             if(body.error) {

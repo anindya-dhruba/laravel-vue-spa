@@ -1,14 +1,14 @@
 # Laravel Vue SPA
-Starter Boilerplate SPA made with Laravel 5.4, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios & <3
+Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios & <3
 
 ## What's New
- * Updated to [Laravel 5.4](https://laravel.com/docs/5.4) from [Laravel 5.3](https://laravel.com/docs/5.3)
- * Build system uses [Laravel Mix](https://laravel.com/docs/5.4/mix) (webpack) instead of [Laravel Elixir](https://laravel.com/docs/5.3/elixir) (gulp)
+ * Updated to [Laravel 5.5](https://laravel.com/docs/5.5) from [Laravel 5.4](https://laravel.com/docs/5.4)
+ * Build system uses [Laravel Mix](https://laravel.com/docs/5.5/mix) (webpack) instead of [Laravel Elixir](https://laravel.com/docs/5.3/elixir) (gulp)
  * All packages are updated (both PHP and JS)
  * Using [Axios](https://github.com/mzabriskie/axios) instead of [Vue Resource](https://github.com/pagekit/vue-resource) [(why?)](https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4#.dlferoozu)
  * Project structure updated
 ## What's included 
-* [Laravel 5.4](https://laravel.com/docs/5.4)
+* [Laravel 5.5](https://laravel.com/docs/5.5)
 * [Vue 2](https://vuejs.org)
 * [Vue Router 2](http://router.vuejs.org)
 * [Vuex 2](http://vuex.vuejs.org)

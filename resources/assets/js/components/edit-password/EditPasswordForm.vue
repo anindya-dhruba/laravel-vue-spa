@@ -7,7 +7,7 @@
                 <span class="help-block" v-if="errors.newPassword">{{ errors.newPassword }}</span>
             </div>
             <div class="form-group" :class="{ 'has-error' : errors.confirmNewPassword}">
-                <label class="control-label" for="confirm-new-password">Old Password</label>
+                <label class="control-label" for="confirm-new-password">Confirm New Password</label>
                 <input type="password" class="form-control" id="confirm-new-password" v-model="confirmNewPassword">
                 <span class="help-block" v-if="errors.confirmNewPassword">{{ errors.confirmNewPassword }}</span>
             </div>

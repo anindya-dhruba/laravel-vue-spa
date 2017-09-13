@@ -47,7 +47,7 @@ export default {
         updatePasswordFailure: ({commit, dispatch}, body) => {
             commit({
                 type: types.UPDATE_PASSWORD_FAILURE,
-                errors: body
+                errors: body.errors || []
             });
 
             if(body.error) {

@@ -49,7 +49,7 @@ export default {
         loginFailure: ({commit, dispatch}, body) => {
             commit({
                 type: types.LOGIN_FAILURE,
-                errors: body
+                errors: body.errors || []
             });
 
             if(body.error) {
