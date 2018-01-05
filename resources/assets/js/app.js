@@ -5,6 +5,7 @@ import axios from 'axios';
 
 window.$ = window.jQuery = $;
 window.axios = axios;
+require('bootstrap-sass');
 
 
 import router from './routes';
