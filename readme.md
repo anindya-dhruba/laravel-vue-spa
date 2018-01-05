@@ -1,5 +1,5 @@
 # Laravel Vue SPA
-Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios & <3
+Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios & :heart:
 
 ## What's New
  * Updated to [Laravel 5.5](https://laravel.com/docs/5.5) from [Laravel 5.4](https://laravel.com/docs/5.4)
@@ -10,8 +10,8 @@ Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 2, Vu
 ## What's included 
 * [Laravel 5.5](https://laravel.com/docs/5.5)
 * [Vue 2](https://vuejs.org)
-* [Vue Router 2](http://router.vuejs.org)
-* [Vuex 2](http://vuex.vuejs.org)
+* [Vue Router 3](http://router.vuejs.org)
+* [Vuex 3](http://vuex.vuejs.org)
 * [Axios](https://github.com/mzabriskie/axios)
 * [Authentication with JWT Token](https://github.com/tymondesigns/jwt-auth)
 
