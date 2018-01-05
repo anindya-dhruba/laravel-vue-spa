@@ -22,7 +22,6 @@
     import {mapState} from 'vuex';
 
     export default {
-        name: 'login-form',
         created() {
             this.$store.dispatch('clearLoginErrors');
         },

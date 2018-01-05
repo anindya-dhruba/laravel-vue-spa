@@ -25,10 +25,9 @@
 
 <script>
     import {mapState} from 'vuex'
-    import * as types from './../../mutation-types';
+    import * as types from '../../../mutation-types';
 
     export default {
-        name: 'edit-profile-form',
         created() {
             this.$store.dispatch('clearEditProfileErrors');
             this.$store.dispatch('setAuthUser');

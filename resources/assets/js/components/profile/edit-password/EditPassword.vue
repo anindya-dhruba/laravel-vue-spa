@@ -10,12 +10,11 @@
 </template>
 
 <script>
-    import EditPasswordForm from './../edit-password/EditPasswordForm.vue'
+    import EditPasswordForm from './EditPasswordForm.vue'
 
     export default {
-        name: 'edit-password',
         components: {
-            EditPasswordForm
+            'edit-password-form': EditPasswordForm
         }
     }
 </script>

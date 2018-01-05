@@ -18,7 +18,6 @@
 </template>
 
 <script>
-    export default{
-        name: 'profile-wrapper'
+    export default {
     }
 </script>

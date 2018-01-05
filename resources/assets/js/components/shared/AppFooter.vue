@@ -11,13 +11,11 @@
     import {siteName} from './../../config';
 
     export default {
-        name: 'app-footer',
         data() {
             return {
                 siteName: siteName,
                 currentYear: (new Date).getFullYear()
             }
-        },
-        components: {}
+        }
     }
 </script>

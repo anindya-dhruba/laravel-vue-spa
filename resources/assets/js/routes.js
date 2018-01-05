@@ -7,10 +7,10 @@ Vue.use(VueRouter);
 import Store from './store/index'
 import Home from './components/home/Home.vue'
 import Login from './components/login/Login.vue'
-import ProfileWrapper from './components/profile-wrapper/ProfileWrapper.vue'
+import ProfileWrapper from './components/profile/ProfileWrapper.vue'
 import Profile from './components/profile/Profile.vue'
-import EditProfile from './components/edit-profile/EditProfile.vue'
-import EditPassword from './components/edit-password/EditPassword.vue'
+import EditProfile from './components/profile/edit-profile/EditProfile.vue'
+import EditPassword from './components/profile/edit-password/EditPassword.vue'
 
 const router = new VueRouter({
     mode: 'history',

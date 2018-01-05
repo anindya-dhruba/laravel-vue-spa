@@ -10,13 +10,11 @@
 </template>
 
 <script>
-    import EditProfileForm from './../edit-profile/EditProfileForm.vue'
-
+    import EditProfileForm from './EditProfileForm.vue'
 
     export default {
-        name: 'edit-profile',
         components: {
-            EditProfileForm
+            'edit-profile-form': EditProfileForm
         }
     }
 </script>

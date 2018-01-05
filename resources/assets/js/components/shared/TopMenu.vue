@@ -36,7 +36,6 @@
     import {mapState} from 'vuex';
 
     export default {
-        name: 'top-menu',
         data() {
             return {
                 siteName: siteName

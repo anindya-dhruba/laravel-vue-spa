@@ -28,7 +28,6 @@
     import {mapState} from 'vuex'
 
     export default {
-        name: 'edit-password-form',
         created() {
             this.$store.dispatch('clearEditPasswordErrors');
         },

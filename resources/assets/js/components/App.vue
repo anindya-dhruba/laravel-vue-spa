@@ -16,16 +16,15 @@
     import jwtToken from './../helpers/jwt-token';
 
     export default {
-        name: 'app',
         created() {
             if(jwtToken.getToken()) {
                 this.$store.dispatch('setAuthUser');
             }
         },
         components: {
-            TopMenu,
-            Notification,
-            AppFooter
+            'top-menu': TopMenu,
+            'notification': Notification,
+            'app-footer': AppFooter
         }
     }
 </script>

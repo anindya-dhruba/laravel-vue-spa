@@ -11,12 +11,10 @@
     import {siteName} from './../../config';
 
     export default {
-        name: 'home',
         data() {
             return {
                 siteName: siteName
             }
-        },
-        components: {}
+        }
     }
 </script>
