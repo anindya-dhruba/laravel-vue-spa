@@ -48,7 +48,10 @@
 			logout() {
 				jwtToken.removeToken();
 				this.$store.dispatch('unsetAuthUser')
-					.then(() => this.$router.push({name: 'login'}));
+					.then(() => {
+						this.$noty.success('You are logged out');
+						this.$router.push({name: 'login'});
+					});
 			}
 		}
 	}

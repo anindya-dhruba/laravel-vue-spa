@@ -11,7 +11,7 @@ Vue.use(VueNoty, {
 	progressBar: false,
 	layout: 'bottomRight',
 	theme: 'bootstrap-v3',
-	timeout: 5000
+	timeout: 3000
 });
 
 import router from './router';
