@@ -60,8 +60,8 @@
 		methods: {
 			updateProfile() {
 				// uncomment the following 2 lines to enable edit profile
-				// alert('Edit Profile is disabled for demo purpose');
-				// return;
+				this.$noty.info('Edit Profile is disabled for demo purpose');
+				return;
 
 				this.loading = true;
 				axios.post(api.updateUserProfile, this.form)
