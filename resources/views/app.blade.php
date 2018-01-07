@@ -9,7 +9,7 @@
 
         <title>{{ config('app.name') }} - Starter Boilerplate SPA made with Laravel 5.4, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios and <3</title>
 
-        <link href="{{ elixir('/css/app.css') }}" rel="stylesheet">
+        <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
         <script>
             window.Laravel = {!! json_encode([
                 'csrfToken' => csrf_token(),
@@ -25,6 +25,6 @@
             <app></app>
         </div>
 
-        <script src="{{ elixir('/js/app.js') }}"></script>
+        <script src="{{ mix('/js/app.js') }}"></script>
     </body>
 </html>
