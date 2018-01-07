@@ -8,25 +8,27 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 
 class AuthenticateController extends Controller
 {
-    public function authenticate(Request $request)
-    {
-        $rules = [
-            'email'     =>  'required|email',
-            'password'  =>  'required'
-        ];
+	public function authenticate(Request $request)
+	{
+		$rules = [
+			'email'    => 'required|email',
+			'password' => 'required'
+		];
 
-        $this->validate($request, $rules);
+		$this->validate($request, $rules);
 
-        $credentials = $request->only('email', 'password');
+		$credentials = $request->only('email', 'password');
 
-        try {
-            if (! $token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'Invalid Login Credential'], 401);
-            }
-        } catch (JWTException $e) {
-            return response()->json(['error' => 'Could not create token'], 500);
-        }
+		try {
+			if(!$token = JWTAuth::attempt($credentials)) {
+				return response()->json(['error' => 'Invalid Login Credential'], 401);
+			}
+		} catch(JWTException $e) {
+			return response()->json(['error' => 'Could not create token'], 500);
+		}
 
-        return response()->json(compact('token'));
-    }
+		$user = $request->user();
+
+		return response()->json(compact('token', 'user'));
+	}
 }
