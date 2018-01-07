@@ -1,22 +1,20 @@
 <template>
-    <div class="container">
-        <div class="jumbotron">
-            <h1 v-once>{{siteName}}</h1>
-            <p>Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios and love</p>
-        </div>
-    </div>
+	<div class="container">
+		<div class="jumbotron">
+			<h1 v-once>{{siteName}}</h1>
+			<p>Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios and love</p>
+		</div>
+	</div>
 </template>
 
 <script>
-    import {siteName} from './../../config';
+	import {siteName} from './../../config';
 
-    export default {
-        name: 'home',
-        data() {
-            return {
-                siteName: siteName
-            }
-        },
-        components: {}
-    }
+	export default {
+		data() {
+			return {
+				siteName: siteName
+			}
+		}
+	}
 </script>

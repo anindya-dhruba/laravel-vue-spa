@@ -1,26 +1,19 @@
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+// noty
+@import "~vuejs-noty/dist/vuejs-noty.css";
+
+// custom
 body {
   overflow-y: scroll;
 }
-.navbar {
-  margin-bottom: 0;
-}
-.notification {
-  margin-bottom: 22px;
-
-  .alert {
-    border-radius: 0;
-    cursor: pointer;
-  }
-}
-
 .form-control:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
@@ -30,6 +23,7 @@ body {
   margin-bottom: 0;
 }
 
+// animation
 .fade-enter-active, .fade-leave-active {
   transition: opacity .2s ease;
 }
