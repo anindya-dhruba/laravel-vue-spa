@@ -2,11 +2,12 @@
 Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios & :heart:
 
 ## What's New
- * Updated to [Laravel 5.5](https://laravel.com/docs/5.5) from [Laravel 5.4](https://laravel.com/docs/5.4)
- * Build system uses [Laravel Mix](https://laravel.com/docs/5.5/mix) (webpack) instead of [Laravel Elixir](https://laravel.com/docs/5.3/elixir) (gulp)
+ * Updated to [Vuex 3](http://vuex.vuejs.org) from Vuex 2
+ * Updated to [Vue Router 3](http://router.vuejs.org) from Vue Router 2
  * All packages are updated (both PHP and JS)
- * Using [Axios](https://github.com/mzabriskie/axios) instead of [Vue Resource](https://github.com/pagekit/vue-resource) [(why?)](https://medium.com/the-vue-point/retiring-vue-resource-871a82880af4#.dlferoozu)
+ * Removed unnecessary vuex store modules
  * Project structure updated
+ 
 ## What's included 
 * [Laravel 5.5](https://laravel.com/docs/5.5)
 * [Vue 2](https://vuejs.org)
