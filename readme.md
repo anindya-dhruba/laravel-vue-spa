@@ -1,6 +1,12 @@
 # Laravel Vue SPA
 Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios & :heart:
 
+## Demo 
+
+![Laravel Vue SPA](https://media.giphy.com/media/26n3JhU8JqIYlxVCw/giphy.gif)
+
+[Live Demo](https://laravel-vue-spa.herokuapp.com)
+
 ## What's New
  * Updated to [Vuex 3](http://vuex.vuejs.org) from Vuex 2
  * Updated to [Vue Router 3](http://router.vuejs.org) from Vue Router 2
