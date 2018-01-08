@@ -1,5 +1,5 @@
 # Laravel Vue SPA
-Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios & :heart:
+Starter Boilerplate SPA made with Laravel 5.5, Bootstrap 4, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios & :heart:
 
 ## Demo 
 
@@ -8,8 +8,9 @@ Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vu
 [Live Demo](https://laravel-vue-spa.herokuapp.com)
 
 ## What's New
- * Updated to [Vuex 3](http://vuex.vuejs.org) from Vuex 2
- * Updated to [Vue Router 3](http://router.vuejs.org) from Vue Router 2
+ * Upgraded to [Bootstrap 4](http://getbootstrap.com) from [Bootstrap 3](https://getbootstrap.com/docs/3.3)
+ * Upgraded to [Vuex 3](http://vuex.vuejs.org) from Vuex 2
+ * Upgraded to [Vue Router 3](http://router.vuejs.org) from Vue Router 2
  * All packages are updated (both PHP and JS)
  * Removed unnecessary vuex store modules
  * Project structure updated

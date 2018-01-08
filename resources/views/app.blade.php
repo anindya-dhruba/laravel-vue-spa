@@ -6,7 +6,7 @@
         <meta name="author" content="Anindya Dhruba">
         <meta name="description" content="Laravel Vue SPA">
 
-        <title>{{ config('app.name') }} - Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios and <3</title>
+        <title>{{ config('app.name') }} - Starter Boilerplate SPA made with Laravel 5.5, Bootstrap 4, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios and <3</title>
 
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
         <script>
