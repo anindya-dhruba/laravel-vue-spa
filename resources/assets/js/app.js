@@ -5,12 +5,12 @@ import axios from 'axios';
 
 window.$ = window.jQuery = $;
 window.axios = axios;
-require('bootstrap-sass');
+require('bootstrap');
 
 Vue.use(VueNoty, {
 	progressBar: false,
 	layout: 'bottomRight',
-	theme: 'bootstrap-v3',
+	theme: 'bootstrap-v4',
 	timeout: 3000
 });
 

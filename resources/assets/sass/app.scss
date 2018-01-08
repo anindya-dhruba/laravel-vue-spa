@@ -1,11 +1,8 @@
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootstrap/dist/css/bootstrap";
 
 // noty
 @import "~vuejs-noty/dist/vuejs-noty.css";
@@ -13,14 +10,6 @@
 // custom
 body {
   overflow-y: scroll;
-}
-.form-control:focus {
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-.page-header {
-  margin-top: 0;
-  border-bottom: none;
-  margin-bottom: 0;
 }
 
 // animation

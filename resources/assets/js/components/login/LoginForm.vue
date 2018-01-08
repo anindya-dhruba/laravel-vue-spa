@@ -1,27 +1,30 @@
 <template>
 	<div>
 		<form @submit.prevent="login">
-			<div class="form-group" :class="{'has-error' : error.email}">
-				<label class="control-label" for="email">Email</label>
+			<div class="form-group">
+				<label for="email">Email</label>
 				<input
 					type="email"
 					class="form-control"
+					:class="{'is-invalid' : error.email}"
 					id="email"
 					v-model="form.email"
+					autocomplete="off"
 					:disabled="loading"
 				/>
-				<span class="help-block" v-show="error.email">{{ error.email }}</span>
+				<div class="invalid-feedback" v-show="error.email">{{ error.email }}</div>
 			</div>
-			<div class="form-group" :class="{'has-error' : error.password}">
-				<label class="control-label" for="password">Password</label>
+			<div class="form-group">
+				<label for="password">Password</label>
 				<input
 					type="password"
 					class="form-control"
+					:class="{'is-invalid' : error.password}"
 					id="password"
 					v-model="form.password"
 					:disabled="loading"
 				/>
-				<span class="help-block" v-show="error.password">{{ error.password }}</span>
+				<div class="invalid-feedback" v-show="error.password">{{ error.password }}</div>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary btn-block" :disabled="loading">

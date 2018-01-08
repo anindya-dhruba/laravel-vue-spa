@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ config('app.locale') }}">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="Anindya Dhruba">
         <meta name="description" content="Laravel Vue SPA">
 
-        <title>{{ config('app.name') }} - Starter Boilerplate SPA made with Laravel 5.4, JWT Auth, Vue 2, Vue-router 2, Vuex 2, Axios and <3</title>
+        <title>{{ config('app.name') }} - Starter Boilerplate SPA made with Laravel 5.5, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios and <3</title>
 
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
         <script>
@@ -18,9 +17,7 @@
             ]) !!}
         </script>
     </head>
-
     <body>
-
         <div id="app">
             <app></app>
         </div>

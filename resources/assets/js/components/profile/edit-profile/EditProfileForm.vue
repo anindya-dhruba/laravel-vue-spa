@@ -1,38 +1,38 @@
 <template>
 	<div>
 		<form @submit.prevent="updateProfile">
-			<div class="form-group" :class="{'has-error' : error.name}">
-				<label class="control-label" for="name">Name</label>
+			<div class="form-group">
+				<label for="name">Name</label>
 				<input
 					type="text"
 					class="form-control"
+					:class="{'is-invalid' : error.name}"
 					id="name"
 					v-model="form.name"
 					:disabled="loading"
 				/>
-				<span class="help-block" v-show="error.name">{{ error.name }}</span>
+				<div class="invalid-feedback" v-show="error.name">{{ error.name }}</div>
 			</div>
-			<div class="form-group" :class="{'has-error' : error.email}">
-				<label class="control-label" for="email">Email</label>
+			<div class="form-group">
+				<label for="email">Email</label>
 				<input
 					type="email"
 					class="form-control"
+					:class="{'is-invalid' : error.email}"
 					id="email"
 					v-model="form.email"
 					:disabled="loading"
 				/>
-				<span class="help-block" v-show="error.email">{{ error.email }}</span>
+				<div class="invalid-feedback" v-show="error.email">{{ error.email }}</div>
 			</div>
-			<div class="form-group">
-				<button type="submit" class="btn btn-primary" :disabled="loading">
-					<span v-show="loading">Updating Profile</span>
-					<span v-show="!loading">Update Profile</span>
-				</button>
-				<span class="help-block">
-					Update Profile is disabled for demo purpose.
-          <br>
-          Please, enable it from <code>updateProfile()</code> method in EditProfileForm.vue component
-				</span>
+			<button type="submit" class="btn btn-primary" :disabled="loading">
+				<span v-show="loading">Updating Profile</span>
+				<span v-show="!loading">Update Profile</span>
+			</button>
+			<div class="form-text text-muted mt-4">
+				Update Profile is disabled for demo purpose.
+				<br>
+				Please, enable it from <code>updateProfile()</code> method in EditProfileForm.vue component
 			</div>
 		</form>
 	</div>

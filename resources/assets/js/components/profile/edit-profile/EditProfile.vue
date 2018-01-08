@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<h1 class="page-header">Edit Profile</h1>
-		<div class="panel panel-default">
-			<div class="panel-body">
+		<h3 class="mb-4">Edit Profile</h3>
+		<div class="card">
+			<div class="card-body">
 				<edit-profile-form @updateSuccess="updateSuccess"></edit-profile-form>
 			</div>
 		</div>

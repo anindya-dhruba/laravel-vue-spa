@@ -1,17 +1,15 @@
 <template>
 	<div>
-		<h1 class="page-header">{{user.name}}'s Profile</h1>
-		<div class="panel panel-default">
-			<ul class="list-group">
+		<h3 class="mb-4">{{user.name}}'s Profile</h3>
+		<div class="card">
+			<ul class="list-group list-group-flush">
 				<li class="list-group-item">
 					Name
-					<br>
-					<h4>{{ user.name }}</h4>
+					<p class="lead">{{ user.name }}</p>
 				</li>
 				<li class="list-group-item">
 					Email
-					<br>
-					<h4>{{ user.email }}</h4>
+					<p class="lead">{{ user.email }}</p>
 				</li>
 			</ul>
 		</div>

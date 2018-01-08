@@ -1,39 +1,39 @@
 <template>
 	<div>
 		<form @submit.prevent="updatePassword">
-			<div class="form-group" :class="{ 'has-error' : error.new_password}">
-				<label class="control-label" for="new-password">New Password</label>
+			<div class="form-group">
+				<label for="new-password">New Password</label>
 				<input
 					type="password"
 					class="form-control"
+					:class="{'is-invalid' : error.new_password}"
 					id="new-password"
 					v-model="form.new_password"
 					:disabled="loading"
 				/>
-				<span class="help-block" v-if="error.new_password">{{ error.new_password }}</span>
+				<div class="invalid-feedback" v-show="error.new_password">{{ error.new_password }}</div>
 			</div>
-			<div class="form-group" :class="{ 'has-error' : error.confirm_new_password}">
-				<label class="control-label" for="confirm-new-password">Confirm New Password</label>
+			<div class="form-group">
+				<label for="confirm-new-password">Confirm New Password</label>
 				<input
 					type="password"
 					class="form-control"
+					:class="{'is-invalid' : error.confirm_new_password}"
 					id="confirm-new-password"
 					v-model="form.confirm_new_password"
 					:disabled="loading"
 				/>
-				<span class="help-block" v-if="error.confirm_new_password">{{ error.confirm_new_password }}</span>
+				<div class="invalid-feedback" v-show="error.confirm_new_password">{{ error.confirm_new_password }}</div>
 			</div>
 
-			<div class="form-group">
-				<button type="submit" class="btn btn-primary" :disabled="loading">
-					<span v-show="loading">Updating Password</span>
-					<span v-show="!loading">Update Password</span>
-				</button>
-				<span class="help-block">
-					Update Password is disabled for demo purpose.
-	        <br>
-	        Please, enable it from <code>updatePassword()</code> method in EditPasswordForm.vue component
-	      </span>
+			<button type="submit" class="btn btn-primary" :disabled="loading">
+				<span v-show="loading">Updating Password</span>
+				<span v-show="!loading">Update Password</span>
+			</button>
+			<div class="form-text text-muted mt-4">
+				Update Password is disabled for demo purpose.
+				<br>
+				Please, enable it from <code>updatePassword()</code> method in EditPasswordForm.vue component
 			</div>
 		</form>
 	</div>

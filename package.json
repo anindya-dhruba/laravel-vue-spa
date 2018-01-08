@@ -12,10 +12,11 @@
     "devDependencies": {
         "axios": "^0.17",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "bootstrap-sass": "^3.3.7",
+        "bootstrap": "^4.0.0-beta.3",
         "cross-env": "^5.1",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
+        "popper.js": "^1.12.9",
         "vue": "^2.5.7",
         "vue-router": "^3.0.1",
         "vuejs-noty": "^0.1.2",

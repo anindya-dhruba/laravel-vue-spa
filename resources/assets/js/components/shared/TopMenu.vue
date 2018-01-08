@@ -1,28 +1,24 @@
 <template>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
 		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<router-link class="navbar-brand" :to="{name: 'index'}" v-once>{{ siteName }}</router-link>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<router-link :to="{name: 'index'}" tag="li" activeClass="active" exact>
-						<a>Home</a>
+			<router-link class="navbar-brand" :to="{name: 'index'}" v-once>{{ siteName }}</router-link>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<router-link :to="{name: 'index'}" tag="li" class="nav-item" activeClass="active" exact>
+						<a class="nav-link">Home</a>
 					</router-link>
-					<router-link v-show="!isLoggedIn" :to="{name: 'login'}" tag="li" activeClass="active" exact>
-						<a>Login</a>
+					<router-link v-show="!isLoggedIn" :to="{name: 'login'}" tag="li" class="nav-item" activeClass="active" exact>
+						<a class="nav-link">Login</a>
 					</router-link>
-					<router-link v-show="isLoggedIn" :to="{name: 'profile'}" tag="li" activeClass="active">
-						<a>Profile</a>
+					<router-link v-show="isLoggedIn" :to="{name: 'profile'}" tag="li" class="nav-item" activeClass="active">
+						<a class="nav-link">Profile</a>
 					</router-link>
-					<li v-show="isLoggedIn">
-						<a href="#" @click.prevent="logout">Logout</a>
+					<li class="nav-item" v-show="isLoggedIn">
+						<a class="nav-link" href="#" @click.prevent="logout">Logout</a>
 					</li>
 				</ul>
 			</div>

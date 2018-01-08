@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<h1 class="page-header">Edit Password</h1>
-		<div class="panel panel-default">
-			<div class="panel-body">
+		<h3 class="mb-4">Edit Password</h3>
+		<div class="card">
+			<div class="card-body">
 				<edit-password-form @updateSuccess="updateSuccess"></edit-password-form>
 			</div>
 		</div>
