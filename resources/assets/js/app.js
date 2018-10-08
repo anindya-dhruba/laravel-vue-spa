@@ -14,7 +14,11 @@ Vue.use(VueNoty, {
 	timeout: 3000
 });
 
+Vue.component('chat-messages', require('./components/rooms/Messages.vue'));
+Vue.component('chat-form', require('./components/rooms/MessagesForm.vue'));
+
 import router from './router';
+import Echo from './bootstrap';
 import store from './store/index';
 import App from './components/App.vue';
 import jwtToken from './helpers/jwt-token';

@@ -14,6 +14,9 @@
 					<router-link v-show="!isLoggedIn" :to="{name: 'login'}" tag="li" class="nav-item" activeClass="active" exact>
 						<a class="nav-link">Login</a>
 					</router-link>
+					<router-link v-show="isLoggedIn" :to="{name: 'messages'}" tag="li" class="nav-item" activeClass="active" exact>
+						<a class="nav-link">Messages</a>
+					</router-link>
 					<router-link v-show="isLoggedIn" :to="{name: 'profile'}" tag="li" class="nav-item" activeClass="active">
 						<a class="nav-link">Profile</a>
 					</router-link>

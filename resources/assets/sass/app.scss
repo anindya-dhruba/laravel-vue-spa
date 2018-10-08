@@ -1,13 +1,16 @@
-// Variables
+/* Variables */
 @import "variables";
+/* Files */
+@import "messages";
 
-// Bootstrap
+/* Bootstrap */
 @import "~bootstrap/dist/css/bootstrap";
 
-// noty
+/* Noty */
 @import "~vuejs-noty/dist/vuejs-noty.css";
 
-// custom
+
+
 body {
   overflow-y: scroll;
 }
@@ -19,3 +22,6 @@ body {
 .fade-enter, .fade-leave-active {
   opacity: 0;
 }
+
+
+
