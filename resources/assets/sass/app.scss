@@ -1,7 +1,7 @@
 /* Variables */
 @import "variables";
 /* Files */
-@import "messages";
+@import "rooms";
 
 /* Bootstrap */
 @import "~bootstrap/dist/css/bootstrap";
@@ -15,6 +15,10 @@ body {
   overflow-y: scroll;
 }
 
+footer {
+    margin-top: 50px;
+}
+
 // animation
 .fade-enter-active, .fade-leave-active {
   transition: opacity .2s ease;
@@ -23,5 +27,11 @@ body {
   opacity: 0;
 }
 
+
+h1 {
+    font-size: 25px;
+    padding: 30px 0;
+    color: $main_blue;
+}
 
 

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="panel-form">
         <input id="btn-input" type="text" name="message" placeholder="Type your message" v-model="newMessage" @keyup.enter="sendMessage">
         <span>
             <button class="btn btn-primary btn-sm" id="btn-chat" @click="sendMessage">

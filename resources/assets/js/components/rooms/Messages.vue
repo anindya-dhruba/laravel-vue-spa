@@ -2,14 +2,8 @@
     <ul class="chat">
         <li v-for="message in messages">
             <div class="chat-body">
-                <div>
-                    <strong>
-                        {{ message.user.name }}
-                    </strong>
-                </div>
-                <p>
-                    {{ message.message }}
-                </p>
+                <p class="user">{{ message.user.name }}</p>
+                <p class="message">{{ message.message }}</p>
             </div>
         </li>
     </ul>

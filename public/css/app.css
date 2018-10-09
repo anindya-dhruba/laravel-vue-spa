@@ -652,7 +652,30 @@
   background-color: #06D6A0;
   color: #fff; }
 /* Variables */
+/* Color */
 /* Files */
+.panel {
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #47479410;
+}
+
+.panel .panel-body {
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.panel .panel-form input {
+  height: 50px;
+  margin: 30px 0;
+  width: 88%;
+}
+
+.panel .panel-form button {
+  height: 50px;
+  width: 10%;
+}
+
 .chat {
   list-style: none;
   margin: 0;
@@ -660,19 +683,20 @@
 }
 
 .chat li {
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted #B3A9A9;
+  border-bottom: 1px dotted #474794;
+  padding: 10px;
 }
 
-.chat li .chat-body p {
+.chat li .user {
   margin: 0;
-  color: #777777;
+  color: #474794;
+  font-weight: bold;
 }
 
-.panel-body {
-  overflow-y: scroll;
-  height: 350px;
+.chat li .message {
+  margin: 0;
+  color: #313131;
+  font-size: 14px;
 }
 
 ::-webkit-scrollbar-track {
@@ -10194,6 +10218,10 @@ body {
   overflow-y: scroll;
 }
 
+footer {
+  margin-top: 50px;
+}
+
 .fade-enter-active, .fade-leave-active {
   -webkit-transition: opacity .2s ease;
   transition: opacity .2s ease;
@@ -10201,4 +10229,10 @@ body {
 
 .fade-enter, .fade-leave-active {
   opacity: 0;
+}
+
+h1 {
+  font-size: 25px;
+  padding: 30px 0;
+  color: #474794;
 }

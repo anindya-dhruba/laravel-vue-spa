@@ -5,6 +5,7 @@ import Profile from './components/profile/Profile.vue';
 import EditProfile from './components/profile/edit-profile/EditProfile.vue';
 import EditPassword from './components/profile/edit-password/EditPassword.vue';
 import Rooms from './components/rooms/Rooms.vue';
+import Room from './components/rooms/Room.vue';
 
 export default [
 	{
@@ -23,6 +24,12 @@ export default [
 		path: '/rooms',
 		name: 'rooms',
 		component: Rooms,
+		meta: {requiresAuth: true}
+	},
+	{
+		path: '/room',
+		name: 'room',
+		component: Room,
 		meta: {requiresAuth: true}
 	},
 	{
