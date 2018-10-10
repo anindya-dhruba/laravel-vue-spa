@@ -37047,12 +37047,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         this.fetchMessages();
 
-        window.Echo.private('room').listen('MessageSent', function (e) {
+        window.Echo.private('messages').listen('MessageSent', function (e) {
             _this.messages.push({
                 message: e.message.message,
                 user: e.user
             });
         });
+    },
+    updated: function updated() {
+        var elem = this.$el.querySelector('.panel-body');
+        elem.scrollTop = elem.scrollHeight;
     },
 
 

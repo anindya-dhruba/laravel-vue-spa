@@ -31,13 +31,18 @@
         created() {
             this.fetchMessages();
 
-            window.Echo.private('room')
+            window.Echo.private('messages')
               .listen('MessageSent', (e) => {
                 this.messages.push({
                   message: e.message.message,
                   user: e.user
                 });
             });
+        },
+
+        updated(){            
+            var elem = this.$el.querySelector('.panel-body')
+            elem.scrollTop = elem.scrollHeight;
         },
 
 

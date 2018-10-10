@@ -7,7 +7,7 @@ use App\Events\MessageSent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class RoomsController extends Controller
+class MessagesController extends Controller
 {
     
     /**
