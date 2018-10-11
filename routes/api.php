@@ -20,4 +20,6 @@ Route::group(['middleware' => 'jwt.auth'], function()
     Route::post('user/password/update', 'UserController@updatePassword');
     Route::get('message', 'MessagesController@fetchMessages');
     Route::post('message', 'MessagesController@sendMessage');
+    Route::get('room', 'RoomsController@fetchRooms');
+    Route::post('room', 'RoomsController@createRoom');
 });

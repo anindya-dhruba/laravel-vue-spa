@@ -27,7 +27,7 @@ export default [
 		meta: {requiresAuth: true}
 	},
 	{
-		path: '/room',
+		path: '/room/:roomId',
 		name: 'room',
 		component: Room,
 		meta: {requiresAuth: true}

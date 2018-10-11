@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Room n°1</h1>
+                <h1>Insert Room Name</h1>
             </div>
             <div class="col-md-12">
                 <div class="panel">
@@ -48,7 +48,6 @@
 
         methods: {
             fetchMessages() {
-                console.log("hello")
                 axios.get(api.message).then(response => {
                     this.messages = response.data;
                 });

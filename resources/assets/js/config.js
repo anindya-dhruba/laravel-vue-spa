@@ -6,5 +6,6 @@ export const api = {
 	currentUser: apiDomain + '/user',
 	updateUserProfile: apiDomain + '/user/profile/update',
 	updateUserPassword: apiDomain + '/user/password/update',
-    message: apiDomain + '/message'
+    message: apiDomain + '/message',
+    room: apiDomain + '/room'
 };

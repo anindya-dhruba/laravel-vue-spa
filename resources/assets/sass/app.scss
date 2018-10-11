@@ -28,10 +28,14 @@ footer {
 }
 
 
-h1 {
+h1, .title {
     font-size: 25px;
     padding: 30px 0;
     color: $main_blue;
 }
 
+.subtitle {
+    font-size: 16px;
+    padding: 30px 0;
+}
 
