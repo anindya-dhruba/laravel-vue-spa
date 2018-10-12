@@ -1443,6 +1443,7 @@ var api = {
 	updateUserProfile: apiDomain + '/user/profile/update',
 	updateUserPassword: apiDomain + '/user/password/update',
 	message: apiDomain + '/message',
+	room_message: apiDomain + '/room_message',
 	room: apiDomain + '/room'
 };
 
@@ -31327,7 +31328,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            newMessage: ''
+            newMessage: '',
+            roomId: this.$route.params.roomId
         };
     },
 
@@ -31342,7 +31344,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         sendMessage: function sendMessage() {
             this.$emit('messagesent', {
                 user: this.user,
-                message: this.newMessage
+                message: this.newMessage,
+                room: this.roomId
             });
 
             this.newMessage = '';
@@ -37056,7 +37059,7 @@ var render = function() {
               ) {
                 return null
               }
-              return _vm.sendMessage($event)
+              return _vm.createRoom($event)
             },
             input: function($event) {
               if ($event.target.composing) {
@@ -37173,13 +37176,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            messages: []
+            messages: [],
+            roomId: { room: parseInt(this.$route.params.roomId) },
+            room: []
         };
     },
     created: function created() {
         var _this = this;
 
         this.fetchMessages();
+        this.getRoom(this.roomId);
 
         window.Echo.private('messages').listen('MessageSent', function (e) {
             _this.messages.push({
@@ -37195,6 +37201,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
     methods: {
+        getRoom: function getRoom(roomId) {
+            axios.get(__WEBPACK_IMPORTED_MODULE_1__config__["a" /* api */].room_message, roomId).then(function (response) {
+                console.log(response);
+                // this.room = response.data;
+            });
+            console.log(this.room);
+        },
         fetchMessages: function fetchMessages() {
             var _this2 = this;
 
@@ -37251,7 +37264,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-12" }, [
-      _c("h1", [_vm._v("Room n°1")])
+      _c("h1", [_vm._v("Insert Room Name")])
     ])
   }
 ]

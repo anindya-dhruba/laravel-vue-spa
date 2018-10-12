@@ -24,12 +24,15 @@
 
         data() {
             return {
-                messages: []
+                messages: [],
+                roomId: {room: parseInt(this.$route.params.roomId)},
+                room: []
             }
         },
 
         created() {
             this.fetchMessages();
+            this.getRoom(this.roomId);
 
             window.Echo.private('messages')
               .listen('MessageSent', (e) => {
@@ -47,6 +50,14 @@
 
 
         methods: {
+            getRoom(roomId) {
+                axios.get(api.room_message, roomId).then(response => {
+                    console.log(response);
+                    // this.room = response.data;
+                });
+                console.log(this.room);
+            },
+
             fetchMessages() {
                 axios.get(api.message).then(response => {
                     this.messages = response.data;

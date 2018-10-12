@@ -12,4 +12,14 @@ class Room extends Model
      * @var array
      */
     protected $fillable = ['name'];
+
+    /**
+     * One to Many Relationship 
+     *
+     * @return
+     */
+    // public function messages()
+    // {
+    //   return $this->hasMany(Message::class);
+    // }
 }

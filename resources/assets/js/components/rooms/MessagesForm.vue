@@ -15,10 +15,11 @@
 
         data() {
             return {
-                newMessage: ''
+                newMessage: '',
+                roomId: this.$route.params.roomId
             }
         },
-
+        
         computed: mapState({
             user: state => state.auth
         }),
@@ -27,7 +28,8 @@
             sendMessage() {
                 this.$emit('messagesent', {
                     user: this.user,
-                    message: this.newMessage
+                    message: this.newMessage,
+                    room: this.roomId
                 });
 
                 this.newMessage = ''

@@ -9,7 +9,7 @@
     
         <h6 class="subtitle">Create a new room :</h6>
         <div class="panel-form">
-            <input id="btn-input" type="text" name="message" placeholder="Type your message" v-model="newRoom" @keyup.enter="sendMessage">
+            <input id="btn-input" type="text" name="message" placeholder="Type your message" v-model="newRoom" @keyup.enter="createRoom">
             <span>
                 <button class="btn btn-primary btn-sm" id="btn-chat" @click="createRoom">
                     Send
