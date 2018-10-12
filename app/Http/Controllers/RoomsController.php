@@ -17,6 +17,15 @@ class RoomsController extends Controller
     }
 
 
+    /**
+     * Fetch all rooms
+     *
+     */
+    public function getRoom($id)
+    {
+      return Room::find($id);
+    }
+
 
     /**
      * Create new room

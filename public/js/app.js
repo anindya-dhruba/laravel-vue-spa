@@ -37177,15 +37177,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             messages: [],
-            roomId: { room: parseInt(this.$route.params.roomId) },
+            roomId: parseInt(this.$route.params.roomId),
             room: []
         };
     },
     created: function created() {
         var _this = this;
 
-        this.fetchMessages();
         this.getRoom(this.roomId);
+        this.fetchRoomMessages(this.roomId);
 
         window.Echo.private('messages').listen('MessageSent', function (e) {
             _this.messages.push({
@@ -37202,17 +37202,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         getRoom: function getRoom(roomId) {
-            axios.get(__WEBPACK_IMPORTED_MODULE_1__config__["a" /* api */].room_message, roomId).then(function (response) {
-                console.log(response);
-                // this.room = response.data;
-            });
-            console.log(this.room);
-        },
-        fetchMessages: function fetchMessages() {
             var _this2 = this;
 
+            axios.get(__WEBPACK_IMPORTED_MODULE_1__config__["a" /* api */].room + "/" + roomId).then(function (response) {
+                _this2.room = response.data;
+            });
+        },
+        fetchMessages: function fetchMessages() {
+            var _this3 = this;
+
             axios.get(__WEBPACK_IMPORTED_MODULE_1__config__["a" /* api */].message).then(function (response) {
-                _this2.messages = response.data;
+                _this3.messages = response.data;
+            });
+        },
+        fetchRoomMessages: function fetchRoomMessages(roomId) {
+            var _this4 = this;
+
+            axios.get(__WEBPACK_IMPORTED_MODULE_1__config__["a" /* api */].room_message + "/" + roomId).then(function (response) {
+                console.log(response);
+                _this4.messages = response.data;
             });
         },
         addMessage: function addMessage(message) {
@@ -37236,7 +37244,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row" }, [
-      _vm._m(0),
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("h1", [_vm._v(_vm._s(_vm.room.name))])
+      ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-12" }, [
         _c(
@@ -37258,16 +37268,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12" }, [
-      _c("h1", [_vm._v("Insert Room Name")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

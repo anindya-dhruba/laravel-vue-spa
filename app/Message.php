@@ -12,7 +12,8 @@ class Message extends Model
      *
      * @var array
      */
-    protected $fillable = ['message', 'room'];
+    protected $fillable = ['message'];
+    // protected $fillable = ['message', 'room'];
 
 
     /**
@@ -30,9 +31,9 @@ class Message extends Model
      *
      * @return 
      */
-    // public function room()
-    // {
-    //   return $this->belongsTo(Room::class);
-    // }
+    public function room()
+    {
+      return $this->belongsTo(Room::class);
+    }
 
 }

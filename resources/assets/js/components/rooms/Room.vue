@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Insert Room Name</h1>
+                <h1>{{room.name}}</h1>
             </div>
             <div class="col-md-12">
                 <div class="panel">
@@ -25,14 +25,14 @@
         data() {
             return {
                 messages: [],
-                roomId: {room: parseInt(this.$route.params.roomId)},
+                roomId: parseInt(this.$route.params.roomId),
                 room: []
             }
         },
 
         created() {
-            this.fetchMessages();
             this.getRoom(this.roomId);
+            this.fetchRoomMessages(this.roomId);
 
             window.Echo.private('messages')
               .listen('MessageSent', (e) => {
@@ -51,15 +51,20 @@
 
         methods: {
             getRoom(roomId) {
-                axios.get(api.room_message, roomId).then(response => {
-                    console.log(response);
-                    // this.room = response.data;
+                axios.get(api.room + "/" + roomId).then(response => {
+                    this.room = response.data;
                 });
-                console.log(this.room);
             },
 
             fetchMessages() {
                 axios.get(api.message).then(response => {
+                    this.messages = response.data;
+                });
+            },
+
+            fetchRoomMessages(roomId) {
+                axios.get(api.room_message + "/" + roomId).then(response => {
+                    console.log(response);
                     this.messages = response.data;
                 });
             },

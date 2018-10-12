@@ -25,10 +25,9 @@ class MessagesController extends Controller
      * Fetch messages of one room
      *
      */
-    public function fetchRoomMessages(Request $request)
+    public function fetchRoomMessages($id)
     {
-      return Message::with('user')->get();
-      // return Message::with('user')->where('room', "=", $request->room)->get();
+      return Room::find($id)->messages()->with("user")->get();
     }
 
 
@@ -42,18 +41,12 @@ class MessagesController extends Controller
       $user = Auth::user();
       $room = Room::find($request->input('room'));
 
-      // $message = Message::create([
-      //   'message' => $request->input('message')
-      // ]);
-      // $message->user()->associate($user);
-      // $message->room()->associate($room);
-      // $message->save();
-
-
-      $message = $user->messages()->create([
-        'message' => $request->input('message'),
-        'room' => $room->id
+      $message = new Message([
+        'message' => $request->input('message')
       ]);
+      $message->user()->associate($user);
+      $message->room()->associate($room);
+      $message->save();
 
       broadcast(new MessageSent($user, $message))->toOthers();
 
