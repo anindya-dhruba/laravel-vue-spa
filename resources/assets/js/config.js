@@ -5,5 +5,8 @@ export const api = {
 	login: apiDomain + '/authenticate',
 	currentUser: apiDomain + '/user',
 	updateUserProfile: apiDomain + '/user/profile/update',
-	updateUserPassword: apiDomain + '/user/password/update'
+	updateUserPassword: apiDomain + '/user/password/update',
+    message: apiDomain + '/message',
+    room_message: apiDomain + '/room_message',
+    room: apiDomain + '/room'
 };

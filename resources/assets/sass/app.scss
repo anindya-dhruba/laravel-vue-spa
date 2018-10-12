@@ -1,15 +1,22 @@
-// Variables
+/* Variables */
 @import "variables";
+/* Files */
+@import "rooms";
 
-// Bootstrap
+/* Bootstrap */
 @import "~bootstrap/dist/css/bootstrap";
 
-// noty
+/* Noty */
 @import "~vuejs-noty/dist/vuejs-noty.css";
 
-// custom
+
+
 body {
   overflow-y: scroll;
+}
+
+footer {
+    margin-top: 50px;
 }
 
 // animation
@@ -19,3 +26,16 @@ body {
 .fade-enter, .fade-leave-active {
   opacity: 0;
 }
+
+
+h1, .title {
+    font-size: 25px;
+    padding: 30px 0;
+    color: $main_blue;
+}
+
+.subtitle {
+    font-size: 16px;
+    padding: 30px 0;
+}
+
