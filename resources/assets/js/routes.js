@@ -4,6 +4,7 @@ import ProfileWrapper from './components/profile/ProfileWrapper.vue';
 import Profile from './components/profile/Profile.vue';
 import EditProfile from './components/profile/edit-profile/EditProfile.vue';
 import EditPassword from './components/profile/edit-password/EditPassword.vue';
+import Chat from './components/chat/Chat.vue';
 
 export default [
 	{
@@ -47,5 +48,11 @@ export default [
 				}
 			}
 		]
+	},
+	{
+		path: '/chat',
+		name: 'chat',
+		component: Chat,
+		meta: {requiresAuth: true}
 	},
 ];
