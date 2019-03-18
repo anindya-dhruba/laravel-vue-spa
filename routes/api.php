@@ -18,4 +18,6 @@ Route::group(['middleware' => 'jwt.auth'], function()
     Route::get('user', 'UserController@show');
     Route::post('user/profile/update', 'UserController@updateProfile');
     Route::post('user/password/update', 'UserController@updatePassword');
+    Route::get('chat/messages', 'ChatController@getMessages');
+    Route::post('chat/message', 'ChatController@sendMessage');
 });

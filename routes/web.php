@@ -11,6 +11,13 @@
 |
 */
 
+
 Route::any('{all}', function () {
     return view('app');
 })->where(['all' => '.*']);
+
+Auth::routes();
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/chat', 'ChatController@index')->name('chat');
