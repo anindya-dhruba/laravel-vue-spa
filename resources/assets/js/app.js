@@ -2,6 +2,8 @@ import $ from 'jquery';
 import Vue from 'vue';
 import VueNoty from 'vuejs-noty';
 import axios from 'axios';
+import Echo from "laravel-echo";
+
 
 window.$ = window.jQuery = $;
 window.axios = axios;
@@ -18,6 +20,7 @@ import router from './router';
 import store from './store/index';
 import App from './components/App.vue';
 import jwtToken from './helpers/jwt-token';
+
 
 axios.interceptors.request.use(config => {
 	config.headers['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
@@ -49,6 +52,26 @@ axios.interceptors.response.use(response => {
 
 	return Promise.reject(error);
 });
+
+/// We instanciate Echo with Pusher API
+window.Pusher = require('pusher-js');
+
+/// We check if token is already stored
+store.watch(() => store.getters.isLoggedIn, 
+	isLoggedIn => {
+		window.Echo = new Echo({
+			broadcaster: 'pusher',
+			key: process.env.MIX_PUSHER_APP_KEY,
+			cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+			encrypted: true,
+			auth: {
+				headers: {
+					Authorization: 'Bearer '+ jwtToken.getToken() 
+				},
+			},
+		});
+	}
+);
 
 Vue.component('app', App);
 
