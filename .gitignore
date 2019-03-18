@@ -11,3 +11,7 @@ npm-debug.log
 yarn-error.log
 .env
 .DS_Store
+
+public/css/app\.css
+
+public/js/app\.js
