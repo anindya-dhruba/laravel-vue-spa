@@ -1,0 +1,32 @@
+.chat-interface{
+    display:flex;
+    flex-direction:column;
+    .messages-content{
+        height: 400px;
+        max-height: 400px;
+        overflow-y: scroll;
+        padding: 15px;
+        border: 1px solid #eee;
+        .chat_message{
+            .user_item{
+                font-weight:800;
+            }
+            .message-item{
+                margin-bottom: 0;
+                white-space: pre-wrap;
+            }
+        }
+    }
+    .message-form{
+        .form-input {
+            width: 100%;
+            border: 1px solid #d3e0e9;
+            padding: 5px 10px;
+            outline: none;
+            height:60px;
+        }
+        .notice {
+            color: #aaa
+        }
+    }
+}
