@@ -1,3 +1,12 @@
+# Description
+
+For this project I did the version 1. In this project first I created the front end and then based 
+on it I designed the Back end and later I did the adjustment.
+For the Backend I created the room resources (first migration and model, then controller) and I seeded the database with the initial one room
+for test purposes (In front end I hard coded the room id, but in version 2 it should get the room id from router). 
+Then I created the typical BREAD methods for Room plus messages API, in order to get the messages of a room.
+After that I created the messages table and controller. I also add two gates for update and delete in order for users to prevent from deleting/updating other user's message.
+
 # Laravel Vue SPA
 Starter Boilerplate SPA made with Laravel 5.6, Bootstrap 4, JWT Auth, Vue 2, Vue-router 3, Vuex 3, Axios & :heart:
 

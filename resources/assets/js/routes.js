@@ -1,4 +1,5 @@
 import Home from './components/home/Home.vue';
+import Room from './components/chat/Room';
 import Login from './components/login/Login.vue';
 import ProfileWrapper from './components/profile/ProfileWrapper.vue';
 import Profile from './components/profile/Profile.vue';
@@ -18,6 +19,12 @@ export default [
 		component: Login,
 		meta: {requiresGuest: true}
 	},
+    {
+        path: '/room',
+        name: 'room',
+        component: Room,
+        meta: {requiresAuth: true}
+    },
 	{
 		path: '/profile',
 		component: ProfileWrapper,
