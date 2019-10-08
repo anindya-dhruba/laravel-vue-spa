@@ -11,6 +11,11 @@
 					<router-link :to="{name: 'index'}" tag="li" class="nav-item" activeClass="active" exact>
 						<a class="nav-link">Home</a>
 					</router-link>
+
+					<router-link v-show="isLoggedIn" :to="{name: 'chatx'}" tag="li" class="nav-item" activeClass="active" exact>
+						<a class="nav-link">ChatX</a>
+					</router-link>
+
 					<router-link v-show="!isLoggedIn" :to="{name: 'login'}" tag="li" class="nav-item" activeClass="active" exact>
 						<a class="nav-link">Login</a>
 					</router-link>

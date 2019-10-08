@@ -4,6 +4,7 @@ import ProfileWrapper from './components/profile/ProfileWrapper.vue';
 import Profile from './components/profile/Profile.vue';
 import EditProfile from './components/profile/edit-profile/EditProfile.vue';
 import EditPassword from './components/profile/edit-password/EditPassword.vue';
+import Chatx from './components/chatx/Chatx';
 
 export default [
 	{
@@ -47,5 +48,11 @@ export default [
 				}
 			}
 		]
+	},
+	{
+		path: '/chatx',
+		name: 'chatx',
+		component: Chatx,
+		meta: {requiresAuth: true}
 	},
 ];

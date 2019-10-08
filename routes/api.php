@@ -19,3 +19,9 @@ Route::group(['middleware' => 'jwt.auth'], function()
     Route::post('user/profile/update', 'UserController@updateProfile');
     Route::post('user/password/update', 'UserController@updatePassword');
 });
+
+Route::group([], function()
+{
+    Route::get('messages', 'MessageController@getCollection');
+    Route::post('messages', 'MessageController@create');
+});
