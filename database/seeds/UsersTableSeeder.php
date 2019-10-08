@@ -12,10 +12,29 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::create([
-            'name'      =>  'Root',
-            'email'     =>  'root@example.com',
-            'password'  =>  bcrypt('root')
-        ]);
+        foreach ($this->usersData() as $usersDatum) {
+            User::create($usersDatum);
+        }
+    }
+
+    /**
+     * Return user data for seeding.
+     *
+     * @return array
+     */
+    private function usersData(): array
+    {
+        return [
+            'root' => [
+                'name'      =>  'Root',
+                'email'     =>  'root@example.com',
+                'password'  =>  bcrypt('root')
+            ],
+            'user_1' => [
+                'name'      =>  'Ron',
+                'email'     =>  'ron@example.com',
+                'password'  =>  bcrypt('ron')
+            ],
+        ];
     }
 }
